@@ -17,14 +17,15 @@ class ClassCounter extends Component {
 
     render() {
         return (
-            <div>
-                <div style={{ textAlign: "center" }}>
+            <div style={{ textAlign: "center", marginTop: "90px", }}>
+               <button>
+               <div >
                     <h1>Count: {this.state.count}</h1>
-                    <button onClick={this.handleIncrease}>Increase</button>
-                    <button onClick={this.handleDecrease}>Decrease</button>
-
+                    <button className="go" onClick={this.handleIncrease}>Increase</button>
+                    <button className="stop" onClick={this.handleDecrease}>Decrease</button>
                 </div>
-
+               </button>
+<hr />
             </div>
         );
     }

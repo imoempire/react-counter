@@ -11,9 +11,11 @@ const handleDecrease =() => {
 }
   return (
     <div style={{textAlign: "center"}}>
+      <button>
       <h1>Count: {count}</h1>
-      <button onClick={handleIncrease}>Increase</button>
-      <button onClick={handleDecrease}>Decrease</button>    
+      <button className="go" onClick={handleIncrease}>Increase</button>
+      <button className="stop" onClick={handleDecrease}>Decrease</button> 
+      </button>   
     </div>
   );
 }
