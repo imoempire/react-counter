@@ -3,26 +3,25 @@ import React, { Component } from 'react';
 class ClassCounter extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            count: 0
-        };
+        this.state = {count: 0};
     }  
-    render() {
-        handleIncrease=()=>{
-            this.setState(this.state.count +1)
-        };
-       handleDecrease=() => {
-          this.setState(this.state.count - 1)};
 
+    handleIncrease=(e) =>{
+       e.preventDefault();
+      this.setState({count: this.state.count + 1})
+   };
+   handleDecrease= (e) => {
+       e.preventDefault();
+       this.setState({count: this.state.count - 1})
+   }
+
+    render() {
         return (
             <div>
                 <div style={{ textAlign: "center" }}>
                     <h1>Count: {this.state.count}</h1>
-                    <button onClick={() => this.setState({ count: this.state.count + 1 })}>Increase</button>
-                    <button onClick={() => this.setState({ count: this.state.count + 1 })}>Decrease</button>
-                    <br />
-                    <button onClick={handleIncrease}>Increase</button>
-                    <button onClick={handleDecrease}>Decrease</button>
+                    <button onClick={this.handleIncrease}>Increase</button>
+                    <button onClick={this.handleDecrease}>Decrease</button>
 
                 </div>
 
