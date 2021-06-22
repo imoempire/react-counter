@@ -1,5 +1,5 @@
 {
-  "name": "state-app",
+  "name": "react-counter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
